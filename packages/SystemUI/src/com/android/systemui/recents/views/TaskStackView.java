@@ -528,17 +528,7 @@ public class TaskStackView extends FrameLayout implements TaskStack.TaskStackCal
         tv.dismissTask();
     }
 
-    /** Resets the focused task. */
-    void resetFocusedTask() {
-        if ((0 <= mFocusedTaskIndex) && (mFocusedTaskIndex < mStack.getTaskCount())) {
-            Task t = mStack.getTasks().get(mFocusedTaskIndex);
-            TaskView tv = getChildViewForTask(t);
-            if (tv != null) {
-                tv.unsetFocusedTask();
-            }
-        }
-        mFocusedTaskIndex = -1;
-
+    /** Dismisses all tasks. */
     public void dismissAllTasks() {
         post(new Runnable() {
             @Override
@@ -564,6 +554,18 @@ public class TaskStackView extends FrameLayout implements TaskStack.TaskStackCal
                 }
             }
         });
+    }
+
+    /** Resets the focused task. */
+    void resetFocusedTask() {
+        if ((0 <= mFocusedTaskIndex) && (mFocusedTaskIndex < mStack.getTaskCount())) {
+            Task t = mStack.getTasks().get(mFocusedTaskIndex);
+            TaskView tv = getChildViewForTask(t);
+            if (tv != null) {
+                tv.unsetFocusedTask();
+            }
+        }
+        mFocusedTaskIndex = -1;
     }
 
     @Override

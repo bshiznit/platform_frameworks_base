@@ -116,7 +116,6 @@ public class ImageWallpaper extends WallpaperService {
         boolean mVisible = true;
         boolean mRedrawNeeded;
         boolean mOffsetsChanged;
-        boolean mSurfaceChanged;
         int mLastXTranslation;
         int mLastYTranslation;
 
@@ -274,7 +273,7 @@ public class ImageWallpaper extends WallpaperService {
             }
 
             super.onSurfaceChanged(holder, format, width, height);
-            mSurfaceChanged = true;
+
             drawFrame();
         }
 
@@ -320,28 +319,6 @@ public class ImageWallpaper extends WallpaperService {
                 if (newRotation != mLastRotation) {
                     // Update surface size (if necessary)
                     updateSurfaceSize(getSurfaceHolder());
-            int newRotation = ((WindowManager) getSystemService(WINDOW_SERVICE)).
-                    getDefaultDisplay().getRotation();
-
-            // Sometimes a wallpaper is not large enough to cover the screen in one dimension.
-            // Call updateSurfaceSize -- it will only actually do the update if the dimensions
-            // should change
-            if (newRotation != mLastRotation || mSurfaceChanged ) {
-                // Update surface size (if necessary)
-                updateSurfaceSize(getSurfaceHolder());
-                mSurfaceChanged = false;
-            }
-            SurfaceHolder sh = getSurfaceHolder();
-            final Rect frame = sh.getSurfaceFrame();
-            final int dw = frame.width();
-            final int dh = frame.height();
-            boolean surfaceDimensionsChanged = dw != mLastSurfaceWidth || dh != mLastSurfaceHeight;
-
-            boolean redrawNeeded = surfaceDimensionsChanged || newRotation != mLastRotation;
-            if (!redrawNeeded && !mOffsetsChanged) {
-                if (DEBUG) {
-                    Log.d(TAG, "Suppressed drawFrame since redraw is not needed "
-                            + "and offsets have not changed.");
                 }
                 SurfaceHolder sh = getSurfaceHolder();
                 final Rect frame = sh.getSurfaceFrame();
