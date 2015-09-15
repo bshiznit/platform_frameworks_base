@@ -1898,7 +1898,10 @@
         string that's stored in 8-bit unpacked format) characters.-->
     <bool translatable="false" name="config_sms_decode_gsm_8bit_data">false</bool>
 
-    <!-- Package name providing WebView implementation. -->
+    <!-- Package name providing WebView implementation. (Google PreBuilt) -->
+    <string name="config_prebuiltWebViewPackageName" translatable="false">com.google.android.webview</string>
+
+    <!-- Package name providing WebView implementation. (AOSP) -->
     <string name="config_webViewPackageName" translatable="false">com.android.webview</string>
 
     <!-- If EMS is not supported, framework breaks down EMS into single segment SMS
