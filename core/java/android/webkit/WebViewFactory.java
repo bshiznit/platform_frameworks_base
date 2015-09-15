@@ -88,6 +88,12 @@ public final class WebViewFactory {
                 com.android.internal.R.string.config_webViewPackageName);
     }
 
+    // Get the prebuilt webview package name as configured in the config.xml
+    private static String getPrebuiltWebViewPackageName() {
+        return AppGlobals.getInitialApplication().getString(
+                com.android.internal.R.string.config_prebuiltWebViewPackageName);
+    }
+
     // Check if the prebuilt webview package, as configured in the config.xml
     // is installed
     private static boolean hasPrebuiltWebViewPackage() {
