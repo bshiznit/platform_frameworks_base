@@ -285,11 +285,8 @@ class GlobalActions implements DialogInterface.OnDismissListener, DialogInterfac
                 mItems.add(new PowerAction());
             } else if (GLOBAL_ACTION_KEY_REBOOT.equals(actionKey)) {
                 mItems.add(getRebootAction());
-<<<<<<< HEAD
-=======
             } else if (GLOBAL_ACTION_KEY_SCREENSHOT.equals(actionKey)) {
                 mItems.add(getScreenshotAction());
->>>>>>> 4b66d63... Initial changes. I will track properly going forward.
             } else if (GLOBAL_ACTION_KEY_AIRPLANE.equals(actionKey)) {
                 mItems.add(mAirplaneModeOn);
             } else if (GLOBAL_ACTION_KEY_BUGREPORT.equals(actionKey)) {
@@ -394,8 +391,6 @@ class GlobalActions implements DialogInterface.OnDismissListener, DialogInterfac
         };
     }
 
-<<<<<<< HEAD
-=======
     private Action getScreenshotAction() {
         return new SinglePressAction(com.android.internal.R.drawable.ic_lock_screenshot,
                 R.string.global_action_screenshot) {
@@ -414,7 +409,6 @@ class GlobalActions implements DialogInterface.OnDismissListener, DialogInterfac
         };
     }
 
->>>>>>> 4b66d63... Initial changes. I will track properly going forward.
     private Action getBugReportAction() {
         return new SinglePressAction(com.android.internal.R.drawable.ic_lock_bugreport,
                 R.string.bugreport_title) {
