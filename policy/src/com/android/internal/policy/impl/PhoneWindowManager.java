@@ -19,6 +19,7 @@ import android.app.ActivityManager;
 import android.app.ActivityManagerNative;
 import android.app.AppOpsManager;
 import android.app.IUiModeManager;
+import android.app.KeyguardManager;
 import android.app.ProgressDialog;
 import android.app.SearchManager;
 import android.app.StatusBarManager;
@@ -1086,6 +1087,38 @@ public class PhoneWindowManager implements WindowManagerPolicy {
             mEndCallKeyHandled = true;
             if (!performHapticFeedbackLw(null, HapticFeedbackConstants.LONG_PRESS, false)) {
                 performAuditoryFeedbackForAccessibilityIfNeed();
+            // The context isn't read
+            if (mLongPressOnPowerBehavior < 0) {
+                mLongPressOnPowerBehavior = mContext.getResources().getInteger(
+                        com.android.internal.R.integer.config_longPressOnPowerBehavior);
+            }
+            int resolvedBehavior = mLongPressOnPowerBehavior;
+            KeyguardManager km = (KeyguardManager) mContext.getSystemService(Context.KEYGUARD_SERVICE);
+            boolean locked = km.inKeyguardRestrictedInputMode() && isKeyguardSecure();
+            if (locked) {
+                resolvedBehavior = LONG_PRESS_POWER_NOTHING;
+            }
+            else if (FactoryTest.isLongPressOnPowerOffEnabled()) {
+                resolvedBehavior = LONG_PRESS_POWER_SHUT_OFF_NO_CONFIRM;
+            }
+
+            switch (resolvedBehavior) {
+            case LONG_PRESS_POWER_NOTHING:
+                break;
+            case LONG_PRESS_POWER_GLOBAL_ACTIONS:
+                mPowerKeyHandled = true;
+                if (!performHapticFeedbackLw(null, HapticFeedbackConstants.LONG_PRESS, false)) {
+                    performAuditoryFeedbackForAccessibilityIfNeed();
+                }
+                showGlobalActionsInternal();
+                break;
+            case LONG_PRESS_POWER_SHUT_OFF:
+            case LONG_PRESS_POWER_SHUT_OFF_NO_CONFIRM:
+                mPowerKeyHandled = true;
+                performHapticFeedbackLw(null, HapticFeedbackConstants.LONG_PRESS, false);
+                sendCloseSystemWindows(SYSTEM_DIALOG_REASON_GLOBAL_ACTIONS);
+                mWindowManagerFuncs.shutdown(resolvedBehavior == LONG_PRESS_POWER_SHUT_OFF);
+                break;
             }
             showGlobalActionsInternal();
         }

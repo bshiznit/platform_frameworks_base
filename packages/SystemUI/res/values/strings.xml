@@ -916,4 +916,7 @@
 
     <!-- Hide quick settings tile confirmation button -->
     <string name="quick_settings_reset_confirmation_button">Hide</string>
+
+    <!-- Clear all recent -->
+    <string name="clear_recents">Close all recent</string>
 </resources>
