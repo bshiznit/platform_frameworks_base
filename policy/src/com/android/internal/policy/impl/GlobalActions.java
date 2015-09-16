@@ -104,10 +104,7 @@ class GlobalActions implements DialogInterface.OnDismissListener, DialogInterfac
      * see config.xml config_globalActionList */
     private static final String GLOBAL_ACTION_KEY_POWER = "power";
     private static final String GLOBAL_ACTION_KEY_REBOOT = "reboot";
-<<<<<<< HEAD
-=======
     private static final String GLOBAL_ACTION_KEY_SCREENSHOT = "screenshot";
->>>>>>> 4b66d63... Initial changes. I will track properly going forward.
     private static final String GLOBAL_ACTION_KEY_AIRPLANE = "airplane";
     private static final String GLOBAL_ACTION_KEY_BUGREPORT = "bugreport";
     private static final String GLOBAL_ACTION_KEY_SILENT = "silent";
