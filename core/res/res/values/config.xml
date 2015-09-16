@@ -1047,11 +1047,7 @@
     <string-array name="config_locationProviderPackageNames" translatable="false">
         <!-- The standard AOSP fused location provider -->
         <item>com.android.location.fused</item>
-<<<<<<< HEAD
-	<item>com.google.android.gms</item>
-=======
         <item>com.google.android.gms</item>
->>>>>>> 4b66d63... Initial changes. I will track properly going forward.
     </string-array>
 
     <!-- This string array can be overriden to enable test location providers initially. -->
