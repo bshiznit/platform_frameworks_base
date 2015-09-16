@@ -917,13 +917,10 @@
     <!-- Hide quick settings tile confirmation button -->
     <string name="quick_settings_reset_confirmation_button">Hide</string>
 
-<<<<<<< HEAD
-=======
     <!-- Screenshot delete -->
     <string name="screenshot_delete_action">Delete</string>
     <string name="screenshot_delete_confirmation">Screenshot deleted.</string>
 
->>>>>>> 4b66d63... Initial changes. I will track properly going forward.
     <!-- Clear all recent -->
     <string name="clear_recents">Close all recent</string>
 </resources>
