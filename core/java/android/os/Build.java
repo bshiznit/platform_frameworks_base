@@ -665,7 +665,7 @@ public class Build {
      * @hide
      */
     public static boolean isFingerprintConsistent() {
-        final String system = SystemProperties.get("ro.build.fingerprint");
+        /*final String system = SystemProperties.get("ro.build.fingerprint");
         final String vendor = SystemProperties.get("ro.vendor.build.fingerprint");
 
         if (TextUtils.isEmpty(system)) {
@@ -679,7 +679,7 @@ public class Build {
                         + " but vendor reported " + vendor);
                 return false;
             }
-        }
+        }*/
 
         return true;
     }
