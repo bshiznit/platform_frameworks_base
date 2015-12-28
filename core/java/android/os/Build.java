@@ -725,7 +725,7 @@ public class Build {
         final String requiredRadio = SystemProperties.get("ro.build.expect.baseband");
         final String currentRadio = SystemProperties.get("gsm.version.baseband");
 
-        if (TextUtils.isEmpty(system)) {
+        /* if (TextUtils.isEmpty(system)) {
             Slog.e(TAG, "Required ro.build.fingerprint is empty!");
             return false;
         }
@@ -736,7 +736,7 @@ public class Build {
                         + " but vendor reported " + vendor);
                 return false;
             }
-        }
+        } */
 
         /* TODO: Figure out issue with checks failing
         if (!TextUtils.isEmpty(bootimage)) {

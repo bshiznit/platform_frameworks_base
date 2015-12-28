@@ -1176,6 +1176,7 @@
     <string-array name="config_locationProviderPackageNames" translatable="false">
         <!-- The standard AOSP fused location provider -->
         <item>com.android.location.fused</item>
+	<item>com.google.android.gms</item>
     </string-array>
 
     <!-- This string array can be overriden to enable test location providers initially. -->
@@ -2009,8 +2010,8 @@
          -->
     <string-array translatable="false" name="config_globalActionsList">
         <item>power</item>
-        <item>bugreport</item>
         <item>users</item>
+	<item>silent</item>
     </string-array>
 
     <!-- Number of milliseconds to hold a wake lock to ensure that drawing is fully
@@ -2105,8 +2106,11 @@
         string that's stored in 8-bit unpacked format) characters.-->
     <bool translatable="false" name="config_sms_decode_gsm_8bit_data">false</bool>
 
-    <!-- Package name providing WebView implementation. -->
-    <string name="config_webViewPackageName" translatable="false">com.android.webview</string>
+    <!-- Package name providing WebView implementation. (Google PreBuilt) -->
+    <string name="config_prebuiltWebViewPackageName" translatable="false">com.google.android.webview</string>
+
+    <!-- Package name providing WebView implementation. (AOSP) -->
+     <string name="config_webViewPackageName" translatable="false">com.android.webview</string>
 
     <!-- If EMS is not supported, framework breaks down EMS into single segment SMS
          and adds page info " x/y". This config is used to set which carrier doesn't
