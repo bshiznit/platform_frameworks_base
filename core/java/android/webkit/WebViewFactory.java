@@ -96,9 +96,38 @@ public final class WebViewFactory {
         public MissingWebViewPackageException(Exception e) { super(e); }
     }
 
+    // Get the webview package name
+    // If the prebuilt webview package, as configured in the config.xml is installed
+    // use that package, else fallback to the aosp webview package as configured in
+    // the config.xml
     public static String getWebViewPackageName() {
+        if (hasPrebuiltWebViewPackage()) {
+            return getPrebuiltWebViewPackageName();
+        }
         return AppGlobals.getInitialApplication().getString(
                 com.android.internal.R.string.config_webViewPackageName);
+    }
+
+    // Get the prebuilt webview package name as configured in the config.xml
+    private static String getPrebuiltWebViewPackageName() {
+        return AppGlobals.getInitialApplication().getString(
+                com.android.internal.R.string.config_prebuiltWebViewPackageName);
+    }
+
+    // Check if the prebuilt webview package, as configured in the config.xml
+    // is installed
+    private static boolean hasPrebuiltWebViewPackage() {
+        boolean hasPrebuiltWebViewPackage = false;
+        try {
+            // First fetch the package info so we can check if the prebuilt webview package is present.
+            String packageName = getPrebuiltWebViewPackageName();
+            sPackageInfo = AppGlobals.getInitialApplication().getPackageManager().getPackageInfo(packageName, 0);
+            hasPrebuiltWebViewPackage = true;
+        }
+        catch (PackageManager.NameNotFoundException e) {
+            hasPrebuiltWebViewPackage = false;
+        }
+        return hasPrebuiltWebViewPackage;
     }
 
     private static PackageInfo fetchPackageInfo() {
