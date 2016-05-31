@@ -856,7 +856,7 @@
     <!-- Screen brightness used to dim the screen while dozing in a very low power state.
          May be less than the minimum allowed brightness setting
          that can be set by the user. -->
-    <integer name="config_screenBrightnessDoze">1</integer>
+    <integer name="config_screenBrightnessDoze">17</integer>
 
     <!-- Allow automatic adjusting of the screen brightness while dozing in low power state. -->
     <bool name="config_allowAutoBrightnessWhileDozing">false</bool>
@@ -1047,6 +1047,7 @@
     <string-array name="config_locationProviderPackageNames" translatable="false">
         <!-- The standard AOSP fused location provider -->
         <item>com.android.location.fused</item>
+        <item>com.google.android.gms</item>
     </string-array>
 
     <!-- This string array can be overriden to enable test location providers initially. -->
@@ -1415,11 +1416,11 @@
 
          Note that doze dreams are not subject to the same start conditions as ordinary dreams.
          Doze dreams will run whenever the power manager is in a dozing state. -->
-    <string name="config_dozeComponent"></string>
+    <string name="config_dozeComponent">com.android.systemui.doze.DozeService</string>
 
     <!-- If true, the doze component is not started until after the screen has been
          turned off and the screen off animation has been performed. -->
-    <bool name="config_dozeAfterScreenOff">false</bool>
+    <bool name="config_dozeAfterScreenOff">true</bool>
 
     <!-- Power Management: Specifies whether to decouple the auto-suspend state of the
          device from the display on/off state.
@@ -1439,7 +1440,7 @@
 
          Refer to autosuspend.h for details.
     -->
-    <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">false</bool>
+    <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">true</bool>
 
     <!-- Power Management: Specifies whether to decouple the interactive state of the
          device from the display on/off state.
@@ -1808,6 +1809,9 @@
          on the current state of the device.
          Each item must be one of the following strings:
          "power" = Power off
+         "reboot" = Add an option to reboot the device
+         "screenshot" = Add an option to take a screenshot
+         "lockdown" = Add an action that locks the phone and enforces that it can't be unlocked without entering a credential
          "settings" = An action to launch settings
          "airplane" = Airplane mode toggle
          "bugreport" = Take bug report, if available
@@ -1816,8 +1820,9 @@
          -->
     <string-array translatable="false" name="config_globalActionsList">
         <item>power</item>
-        <item>bugreport</item>
-        <item>users</item>
+        <item>reboot</item>
+        <item>screenshot</item>
+        <item>silent</item>
     </string-array>
 
     <!-- default telephony hardware configuration for this platform.
@@ -1898,7 +1903,10 @@
         string that's stored in 8-bit unpacked format) characters.-->
     <bool translatable="false" name="config_sms_decode_gsm_8bit_data">false</bool>
 
-    <!-- Package name providing WebView implementation. -->
+    <!-- Package name providing WebView implementation. (Google PreBuilt) -->
+    <string name="config_prebuiltWebViewPackageName" translatable="false">com.google.android.webview</string>
+
+    <!-- Package name providing WebView implementation. (AOSP) -->
     <string name="config_webViewPackageName" translatable="false">com.android.webview</string>
 
     <!-- If EMS is not supported, framework breaks down EMS into single segment SMS

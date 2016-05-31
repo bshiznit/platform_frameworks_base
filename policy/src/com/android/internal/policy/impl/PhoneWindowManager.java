@@ -19,6 +19,7 @@ import android.app.ActivityManager;
 import android.app.ActivityManagerNative;
 import android.app.AppOpsManager;
 import android.app.IUiModeManager;
+import android.app.KeyguardManager;
 import android.app.ProgressDialog;
 import android.app.SearchManager;
 import android.app.StatusBarManager;
@@ -1041,7 +1042,12 @@ public class PhoneWindowManager implements WindowManagerPolicy {
     }
 
     private int getResolvedLongPressOnPowerBehavior() {
-        if (FactoryTest.isLongPressOnPowerOffEnabled()) {
+            KeyguardManager km = (KeyguardManager) mContext.getSystemService(Context.KEYGUARD_SERVICE);
+            boolean locked = km.inKeyguardRestrictedInputMode() && isKeyguardSecure();
+            if (locked) {
+                return LONG_PRESS_POWER_NOTHING;
+            }
+            else if (FactoryTest.isLongPressOnPowerOffEnabled()) {
             return LONG_PRESS_POWER_SHUT_OFF_NO_CONFIRM;
         }
         return mLongPressOnPowerBehavior;
@@ -1081,6 +1087,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
     }
 
     private final Runnable mEndCallLongPress = new Runnable() {
+
         @Override
         public void run() {
             mEndCallKeyHandled = true;
