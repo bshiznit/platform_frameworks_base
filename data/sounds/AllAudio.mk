@@ -13,17 +13,36 @@
 # limitations under the License.
 
 LOCAL_PATH := frameworks/base/data/sounds
+ new file:   data/sounds/alarms/material/ogg/Awaken.ogg
+   new file:   data/sounds/alarms/material/ogg/Bounce.ogg
+     new file:   data/sounds/alarms/material/ogg/Drip.ogg
+       new file:   data/sounds/alarms/material/ogg/Gallop.ogg
+         new file:   data/sounds/alarms/material/ogg/Nudge.ogg
+	   new file:   data/sounds/alarms/material/ogg/Orbit.ogg
+	     new file:   data/sounds/alarms/material/ogg/Rise.ogg
+	       new file:   data/sounds/alarms/material/ogg/Sway.ogg
+	         new file:   data/sounds/alarms/material/ogg/Wag.ogg
+
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/alarms/material/ogg/Argon.ogg:system/media/audio/alarms/Argon.ogg \
+    $(LOCAL_PATH)/alarms/material/ogg/Awaken.ogg:system/media/audio/alarms/Awaken.ogg \
+    $(LOCAL_PATH)/alarms/material/ogg/Bounce.ogg:system/media/audio/alarms/Bounce.ogg \
     $(LOCAL_PATH)/alarms/material/ogg/Carbon.ogg:system/media/audio/alarms/Carbon.ogg \
+    $(LOCAL_PATH)/alarms/material/ogg/Drip.ogg:system/media/audio/alarms/Drip.ogg \
+    $(LOCAL_PATH)/alarms/material/ogg/Gallop.ogg:system/media/audio/alarms/Gallop.ogg \
     $(LOCAL_PATH)/alarms/material/ogg/Helium.ogg:system/media/audio/alarms/Helium.ogg \
     $(LOCAL_PATH)/alarms/material/ogg/Krypton.ogg:system/media/audio/alarms/Krypton.ogg \
     $(LOCAL_PATH)/alarms/material/ogg/Neon.ogg:system/media/audio/alarms/Neon.ogg \
+    $(LOCAL_PATH)/alarms/material/ogg/Nudge.ogg:system/media/audio/alarms/Nudge.ogg \
+    $(LOCAL_PATH)/alarms/material/ogg/Orbit.ogg:system/media/audio/alarms/Orbit.ogg \
     $(LOCAL_PATH)/alarms/material/ogg/Osmium.ogg:system/media/audio/alarms/Osmium.ogg \
     $(LOCAL_PATH)/alarms/material/ogg/Oxygen.ogg:system/media/audio/alarms/Oxygen.ogg \
     $(LOCAL_PATH)/alarms/material/ogg/Platinum.ogg:system/media/audio/alarms/Platinum.ogg \
+    $(LOCAL_PATH)/alarms/material/ogg/Rise.ogg:system/media/audio/alarms/Rise.ogg \
+    $(LOCAL_PATH)/alarms/material/ogg/Sway.ogg:system/media/audio/alarms/Sway.ogg \
     $(LOCAL_PATH)/alarms/material/ogg/Timer.ogg:system/media/audio/alarms/Timer.ogg \
+    $(LOCAL_PATH)/alarms/material/ogg/Wag.ogg:system/media/audio/alarms/Wag.ogg \
     $(LOCAL_PATH)/notifications/material/ogg/Ariel.ogg:system/media/audio/notifications/Ariel.ogg \
     $(LOCAL_PATH)/notifications/material/ogg/Carme.ogg:system/media/audio/notifications/Carme.ogg \
     $(LOCAL_PATH)/notifications/material/ogg/Ceres.ogg:system/media/audio/notifications/Ceres.ogg \
