@@ -1232,6 +1232,8 @@
     <string-array name="config_locationProviderPackageNames" translatable="false">
         <!-- The standard AOSP fused location provider -->
         <item>com.android.location.fused</item>
+	<!-- The Google provider -->
+	<item>com.google.android.gms</item>
     </string-array>
 
     <!-- This string array can be overriden to enable test location providers initially. -->
@@ -2073,7 +2075,8 @@
          -->
     <string-array translatable="false" name="config_globalActionsList">
         <item>power</item>
-        <item>bugreport</item>
+	<item>reboot</item>
+        <item>silent</item>
         <item>users</item>
     </string-array>
 
