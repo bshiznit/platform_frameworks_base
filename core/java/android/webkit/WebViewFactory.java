@@ -101,17 +101,6 @@ public final class WebViewFactory {
 
     // error for namespace lookup
     public static final int LIBLOAD_FAILED_TO_FIND_NAMESPACE = 10;
-    public static String getWebViewPackageName() {
-        Application initialApp = AppGlobals.getInitialApplication();
-        String pkg = initialApp.getString(
-                com.android.internal.R.string.config_alternateWebViewPackageName);
-        /* Attempt to use alternate WebView package first */
-        if (isPackageInstalled(initialApp, pkg)) {
-            return pkg;
-        }
-        return initialApp.getString(
-                com.android.internal.R.string.config_webViewPackageName);
-    }
 
     private static String getWebViewPreparationErrorReason(int error) {
         switch (error) {
@@ -658,14 +647,6 @@ public final class WebViewFactory {
     public static IWebViewUpdateService getUpdateService() {
         return IWebViewUpdateService.Stub.asInterface(
                 ServiceManager.getService(WEBVIEW_UPDATE_SERVICE_NAME));
-    }
-
-    private static boolean isPackageInstalled(Context context, String packageName) {
-        try {
-            return context.getPackageManager().getPackageInfo(packageName, 0) != null;
-        } catch (PackageManager.NameNotFoundException e) {
-            return false;
-        }
     }
 
     private static native boolean nativeReserveAddressSpace(long addressSpaceToReserve);
