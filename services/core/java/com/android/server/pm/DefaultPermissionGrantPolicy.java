@@ -795,6 +795,15 @@ final class DefaultPermissionGrantPolicy {
                 grantRuntimePermissionsLPw(vendingPackage, SMS_PERMISSIONS, userId);
                 grantRuntimePermissionsLPw(vendingPackage, STORAGE_PERMISSIONS, userId);
             }
+
+            // Google Calendar
+            PackageParser.Package googlecalendarPackage = getSystemPackageLPr(
+                    "com.google.android.calendar");
+            if (googlecalendarPackage != null && doesPackageSupportRuntimePermissions(googlecalendarPackage)) {
+                grantRuntimePermissionsLPw(googlecalendarPackage, CALENDAR_PERMISSIONS, true, userId);
+                grantRuntimePermissionsLPw(googlecalendarPackage, CONTACTS_PERMISSIONS, true, userId);
+                grantRuntimePermissionsLPw(googlecalendarPackage, PHONE_PERMISSIONS, userId);
+            }
         }
     }
 
