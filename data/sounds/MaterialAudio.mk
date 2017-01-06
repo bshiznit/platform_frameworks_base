@@ -28,7 +28,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/alarms/Bounce.ogg:$(OUT_SYS_PATH)/alarms/Bounce.ogg \
     $(LOCAL_PATH)/alarms/Carbon.ogg:$(OUT_SYS_PATH)/alarms/Carbon.ogg \
     $(LOCAL_PATH)/alarms/Drip.ogg:$(OUT_SYS_PATH)/alarms/Drip.ogg \
-    $(LOCAL_PATH)/alarms/Flow.ogg:$(OUT_SYS_PATH)/alarms/Flow.ogg \
     $(LOCAL_PATH)/alarms/Gallop.ogg:$(OUT_SYS_PATH)/alarms/Gallop.ogg \
     $(LOCAL_PATH)/alarms/Helium.ogg:$(OUT_SYS_PATH)/alarms/Helium.ogg \
     $(LOCAL_PATH)/alarms/Krypton.ogg:$(OUT_SYS_PATH)/alarms/Krypton.ogg \
@@ -41,54 +40,35 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/alarms/Rise.ogg:$(OUT_SYS_PATH)/alarms/Rise.ogg \
     $(LOCAL_PATH)/alarms/Sway.ogg:$(OUT_SYS_PATH)/alarms/Sway.ogg \
     $(LOCAL_PATH)/alarms/Timer.ogg:$(OUT_SYS_PATH)/alarms/Timer.ogg
-    $(LOCAL_PATH)/alarms/Wag.ogg:$(OUT_SYS_PATH)/alarms/Wag.ogg
 
 # Notifications
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/notifications/Ariel.ogg:$(OUT_SYS_PATH)/notifications/Ariel.ogg \
-    $(LOCAL_PATH)/notifications/Birdsong.ogg:$(OUT_SYS_PATH)/notifications/Birdsong.ogg \
     $(LOCAL_PATH)/notifications/Carme.ogg:$(OUT_SYS_PATH)/notifications/Carme.ogg \
     $(LOCAL_PATH)/notifications/Ceres.ogg:$(OUT_SYS_PATH)/notifications/Ceres.ogg \
-    $(LOCAL_PATH)/notifications/Chime.ogg:$(OUT_SYS_PATH)/notifications/Chime.ogg \
-    $(LOCAL_PATH)/notifications/Clink.ogg:$(OUT_SYS_PATH)/notifications/Clink.ogg \
     $(LOCAL_PATH)/notifications/Elara.ogg:$(OUT_SYS_PATH)/notifications/Elara.ogg \
     $(LOCAL_PATH)/notifications/Europa.ogg:$(OUT_SYS_PATH)/notifications/Europa.ogg \
-    $(LOCAL_PATH)/notifications/Flick.ogg:$(OUT_SYS_PATH)/notifications/Flick.ogg \
-    $(LOCAL_PATH)/notifications/Hey.ogg:$(OUT_SYS_PATH)/notifications/Hey.ogg \
     $(LOCAL_PATH)/notifications/Iapetus.ogg:$(OUT_SYS_PATH)/notifications/Iapetus.ogg \
     $(LOCAL_PATH)/notifications/Io.ogg:$(OUT_SYS_PATH)/notifications/Io.ogg \
-    $(LOCAL_PATH)/notifications/Note.ogg:$(OUT_SYS_PATH)/notifications/Note.ogg \
     $(LOCAL_PATH)/notifications/Rhea.ogg:$(OUT_SYS_PATH)/notifications/Rhea.ogg \
     $(LOCAL_PATH)/notifications/Salacia.ogg:$(OUT_SYS_PATH)/notifications/Salacia.ogg \
-    $(LOCAL_PATH)/notifications/Strum.ogg:$(OUT_SYS_PATH)/notifications/Strum.ogg \
     $(LOCAL_PATH)/notifications/Tethys.ogg:$(OUT_SYS_PATH)/notifications/Tethys.ogg \
     $(LOCAL_PATH)/notifications/Titan.ogg:$(OUT_SYS_PATH)/notifications/Titan.ogg
-    $(LOCAL_PATH)/notifications/Trill.ogg:$(OUT_SYS_PATH)/notifications/Trill.ogg
 
 # Ringtones
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ringtones/Atria.ogg:$(OUT_SYS_PATH)/ringtones/Atria.ogg \
-    $(LOCAL_PATH)/ringtones/Beats.ogg:$(OUT_SYS_PATH)/ringtones/Beats.ogg \
     $(LOCAL_PATH)/ringtones/Callisto.ogg:$(OUT_SYS_PATH)/ringtones/Callisto.ogg \
     $(LOCAL_PATH)/ringtones/Dione.ogg:$(OUT_SYS_PATH)/ringtones/Dione.ogg \
-    $(LOCAL_PATH)/ringtones/Dance_party.ogg:$(OUT_SYS_PATH)/ringtones/Dance_party.ogg \
-    $(LOCAL_PATH)/ringtones/Early_bird.ogg:$(OUT_SYS_PATH)/ringtones/Early_bird.ogg \
     $(LOCAL_PATH)/ringtones/Ganymede.ogg:$(OUT_SYS_PATH)/ringtones/Ganymede.ogg \
-    $(LOCAL_PATH)/ringtones/Hey_hey.ogg:$(OUT_SYS_PATH)/ringtones/Hey_hey.ogg \
     $(LOCAL_PATH)/ringtones/Luna.ogg:$(OUT_SYS_PATH)/ringtones/Luna.ogg \
     $(LOCAL_PATH)/ringtones/Oberon.ogg:$(OUT_SYS_PATH)/ringtones/Oberon.ogg \
     $(LOCAL_PATH)/ringtones/Phobos.ogg:$(OUT_SYS_PATH)/ringtones/Phobos.ogg \
     $(LOCAL_PATH)/ringtones/Pyxis.ogg:$(OUT_SYS_PATH)/ringtones/Pyxis.ogg \
-    $(LOCAL_PATH)/ringtones/Romance.ogg:$(OUT_SYS_PATH)/ringtones/Romance.ogg \
-    $(LOCAL_PATH)/ringtones/Rrrring.ogg:$(OUT_SYS_PATH)/ringtones/Rrrring.ogg \
     $(LOCAL_PATH)/ringtones/Sedna.ogg:$(OUT_SYS_PATH)/ringtones/Sedna.ogg \
-    $(LOCAL_PATH)/ringtones/Shooting_star.ogg:$(OUT_SYS_PATH)/ringtones/Shooting_star.ogg \
-    $(LOCAL_PATH)/ringtones/Spaceship.ogg:$(OUT_SYS_PATH)/ringtones/Spaceship.ogg \
-    $(LOCAL_PATH)/ringtones/Summer_night.ogg:$(OUT_SYS_PATH)/ringtones/Summer_night.ogg \
     $(LOCAL_PATH)/ringtones/Titania.ogg:$(OUT_SYS_PATH)/ringtones/Titania.ogg \
     $(LOCAL_PATH)/ringtones/Triton.ogg:$(OUT_SYS_PATH)/ringtones/Triton.ogg \
     $(LOCAL_PATH)/ringtones/Umbriel.ogg:$(OUT_SYS_PATH)/ringtones/Umbriel.ogg
-    $(LOCAL_PATH)/ringtones/Zen.ogg:$(OUT_SYS_PATH)/ringtones/Zen.ogg
 
 # UI
 PRODUCT_COPY_FILES += \

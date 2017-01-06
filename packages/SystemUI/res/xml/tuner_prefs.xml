@@ -126,7 +126,7 @@
         android:title="@string/nav_bar"
         android:fragment="com.android.systemui.tuner.NavBarTuner" />
 
-<!--<Preference android:title="@string/color_and_appearance" android:key="color_transform" android:fragment="com.android.systemui.tuner.ColorAndAppearanceFragment" />-->
+    <Preference android:title="@string/color_and_appearance" android:key="color_transform" android:fragment="com.android.systemui.tuner.ColorAndAppearanceFragment" />
 
     <Preference
             android:key="other"
