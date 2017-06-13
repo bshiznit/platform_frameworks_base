@@ -509,7 +509,6 @@ public class SoundPool {
         if (mHasAppOpsPlayAudio) {
             return false;
         }
-        // check bypass flag
         if ((mAttributes.getAllFlags() & AudioAttributes.FLAG_BYPASS_INTERRUPTION_POLICY) != 0) {
             return false;
         }
