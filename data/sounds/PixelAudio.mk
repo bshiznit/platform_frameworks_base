@@ -15,7 +15,6 @@
 LOCAL_PATH := frameworks/base/data/sounds
 
 PRODUCT_COPY_FILES += \
-# alarms
     $(LOCAL_PATH)/pixel/alarms/A_real_hoot.ogg:system/media/audio/alarms/A_real_hoot.ogg \
     $(LOCAL_PATH)/pixel/alarms/Bright_morning.ogg:system/media/audio/alarms/Bright_morning.ogg \
     $(LOCAL_PATH)/pixel/alarms/Cuckoo_clock.ogg:system/media/audio/alarms/Cuckoo_clock.ogg \
@@ -28,7 +27,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/pixel/alarms/Rolling_fog.ogg:system/media/audio/alarms/Rolling_fog.ogg \
     $(LOCAL_PATH)/pixel/alarms/Spokes.ogg:system/media/audio/alarms/Spokes.ogg \
     $(LOCAL_PATH)/pixel/alarms/Sunshower.ogg:system/media/audio/alarms/Sunshower.ogg \
-# effects
     $(LOCAL_PATH)/pixel/effects/Dock.ogg:system/media/audio/ui/Dock.ogg \
     $(LOCAL_PATH)/pixel/effects/ChargingStarted.ogg:system/media/audio/ui/ChargingStarted.ogg \
     $(LOCAL_PATH)/pixel/effects/Effect_Tick.ogg:system/media/audio/ui/Effect_Tick.ogg \
@@ -55,7 +53,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/pixel/effects/audio_initiate.ogg:system/media/audio/ui/audio_initiate.ogg \
     $(LOCAL_PATH)/pixel/effects/camera_click.ogg:system/media/audio/ui/camera_click.ogg \
     $(LOCAL_PATH)/pixel/effects/camera_focus.ogg:system/media/audio/ui/camera_focus.ogg \
-# notifications
     $(LOCAL_PATH)/pixel/notifications/Beginning.ogg:system/media/audio/notifications/Beginning.ogg \
     $(LOCAL_PATH)/pixel/notifications/Coconuts.ogg:system/media/audio/notifications/Coconuts.ogg \
     $(LOCAL_PATH)/pixel/notifications/Duet.ogg:system/media/audio/notifications/Duet.ogg \
@@ -71,7 +68,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/pixel/notifications/Tuneup.ogg:system/media/audio/notifications/Tuneup.ogg \
     $(LOCAL_PATH)/pixel/notifications/Tweeter.ogg:system/media/audio/notifications/Tweeter.ogg \
     $(LOCAL_PATH)/pixel/notifications/Twinkle.ogg:system/media/audio/notifications/Twinkle.ogg \
-# ringtones
     $(LOCAL_PATH)/pixel/ringtones/Copycat.ogg:system/media/audio/ringtones/Copycat.ogg \
     $(LOCAL_PATH)/pixel/ringtones/Crackle.ogg:system/media/audio/ringtones/Crackle.ogg \
     $(LOCAL_PATH)/pixel/ringtones/Flutterby.ogg:system/media/audio/ringtones/Flutterby.ogg \
